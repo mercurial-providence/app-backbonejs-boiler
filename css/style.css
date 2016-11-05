@@ -1,0 +1,101 @@
+:root {
+    --themeColor: #c5d5cb;
+    --hoverColor: #9fa8a3;
+    --bodyColor: #e3e0cf;
+}
+::-moz-selection {
+    /* Code for Firefox */
+    background: var(--themeColor);
+    color: var(--hoverColor);
+}
+::selection {
+    color: var(--hoverColor);
+    background: var(--themeColor);
+}
+@font-face {
+    font-family: "Raleway Regular";
+    src: url(../fonts/raleway_regular.ttf ) format("truetype");
+}
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: "Raleway Regular", "Sans Serif";
+    background-color: var(--bodyColor);
+    font-size: 1em;
+    line-height: 2em;
+    font-weight: normal;
+    height: 100%;
+    width: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-touch-callout: none;
+
+}
+footer {
+    background-color: var(--themeColor);
+    display: table;
+    width: 100%;
+}
+.footer {
+    padding: 2em 0;
+    text-align: center;
+    color: var(--hoverColor);
+}
+header {
+    background: var(--themeColor);
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    z-index: 100000;
+}
+.header {
+    padding: 2em 0;
+    text-align: center;
+    color: var(--hoverColor);
+}
+.container {
+    flex: 1;
+    width: 90%;
+    max-width: 1260px;
+    /* a max-width may be desirable to keep this layout from getting too wide on a large monitor. This keeps line length more readable. IE6 does not respect this declaration. */
+    min-width: 500px;
+    /* a min-width may be desirable to keep this layout from getting too narrow. This keeps line length more readable in the side columns. IE6 does not respect this declaration. */
+    margin: 0 auto;
+    /* the auto value on the sides,coupled with the width,centers the layout. It is not needed if you set the .container's width to 100%. */
+}
+.content {
+    width: 100%;
+    float: left;
+    margin: 3em 0;
+}
+.dont-break-out {
+    /* These are technically the same, but use both */
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    /* This is the dangerous one in WebKit, as it breaks things wherever */
+    word-break: break-all;
+    /* Instead use this non-standard one: */
+    word-break: break-word;
+    /* Adds a hyphen where the word breaks, if supported (No Blink) */
+    -ms-hyphens: auto;
+    -moz-hyphens: auto;
+    -webkit-hyphens: auto;
+    hyphens: auto;
+}
+p {
+    font-size: 1em;
+}
+hr {
+    margin: 1em 0;
+    border-top: 1px solid var(--themeColor);
+}
+.site {
+    margin: 0;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
