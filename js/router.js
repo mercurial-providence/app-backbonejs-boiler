@@ -19,8 +19,8 @@ define([
         },
         home: function (a) {
             document.title = siteTitle + ' - Home';
-            homePage = new HomePage;
-            homePage.render(a);
+            homePage = new HomePage({route: a});
+            homePage.render();
         },
         404: function(){
             document.title = siteTitle + ' - 404';

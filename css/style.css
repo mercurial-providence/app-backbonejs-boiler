@@ -99,3 +99,6 @@ hr {
     min-height: 100vh;
     flex-direction: column;
 }
+code{
+    line-height: 1.2em;
+}

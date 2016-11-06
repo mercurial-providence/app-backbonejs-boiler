@@ -9,11 +9,12 @@ define([
 ], function ($, _, Backbone, Handlebars, jcookie, app, homeHTML) {
     var HomePage = Backbone.View.extend({
         initialize: function (options) {
+            this.options = options;
             _.bindAll(this, 'beforeRender', 'render', 'afterRender');
             var _this = this;
             this.render = _.wrap(this.render, function (render) {
                 _this.beforeRender();
-                render();
+                render(_this.options['route']);
                 _this.afterRender();
                 return _this;
             });

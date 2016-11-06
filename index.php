@@ -6,7 +6,7 @@
     <head>
         <meta charset="UTF-8">
         <link rel="icon" type="image/png" href="fav.png" />
-        <title>Title</title>
+        <title>Boiler Plate</title>
 
         <!-- CSS -->
         <link rel="stylesheet" href="css/style.css" />
