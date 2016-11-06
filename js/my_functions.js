@@ -1,8 +1,7 @@
-var TestFunction = function (a) {
-    
-    if(a){
-        console.log(a);
-    }
+var highlightCode = function () {
+    $('pre code').each(function (i, block) {
+        hljs.highlightBlock(block);
+    });    
 }
 
 

@@ -1,3 +1,11 @@
+<script type="text/template" id="content-box">
+    <label>Database Query:</label>
+    <input type="text" id="query_input" />
+    <input type="button" id="query_button" value="Query" />
+    <div id="content-box-data"></div>
+</script>
+<div id="content-box-output"></div>
+
 <pre><code>#include &lt;iostream&gt;
 #include &lt;cstdlib&gt;
 #include &lt;cmath&gt;
