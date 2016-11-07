@@ -77,7 +77,7 @@ define([
             var dataString = 'query='+encodeURIComponent($('#query_input').val()); {
                 $.ajax({
                     type: "POST",
-                    url: "includes/server.php",
+                    url: "includes/server_raw.php",
                     data: dataString,
                     cache: false,
                     success: function (html) {
