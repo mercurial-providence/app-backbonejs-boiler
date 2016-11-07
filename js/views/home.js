@@ -66,7 +66,8 @@ define([
         },
         events: {
             //Listening for any events, usually click and binding a function with it.
-            'click input[id=query_button]' : 'fireQuery'
+            'click input[id=query_button]' : 'fireQuery',
+            'click input[id=api_button]' : 'fireAPIQuery'
         },
         fireQuery: function(event){
             //Link clicked, you can access the element that was clicked with event.currentTarget
@@ -87,6 +88,31 @@ define([
                     },
                     error: function (e) {
                         console.log('Server Error');
+                    }
+                });
+                return false;
+            }
+        },
+        fireAPIQuery: function(event){
+            //Same thing as ABOVE just using different interaction
+            //POST
+            //GET
+            //PUT
+            //DELETE
+            var js_obj = {"username":"sds","useremail":"shukla.125sachin@gmail.com","message":"S","date":"2016-11-05 12:25:09"};
+            var dataString = JSON.stringify( js_obj ); {
+                $.ajax({
+                    type: "POST",
+                    url: "includes/server_api.php/"+$('#query_input').val(),
+                    data: dataString,
+                    cache: false,
+                    success: function (html) {
+                        console.log('Server Responded');
+                        $('#content-box-data').prepend(html);
+                        highlightCode();
+                    },
+                    error: function (e) {
+                        console.log(e );
                     }
                 });
                 return false;
