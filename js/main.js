@@ -4,7 +4,7 @@ require.config({
     underscore: 'libs/underscore/underscore-min',
     backbone: 'libs/backbone/backbone-min',
     handlebars: 'libs/handlebars/handlebars-v1.3.0',
-	jcookie: 'libs/jquery.cookie',
+	  jcookie: 'libs/jquery.cookie',
     templates : '../templates/',
     router: 'router',
     app:'app'

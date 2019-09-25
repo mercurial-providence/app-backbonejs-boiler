@@ -10,7 +10,6 @@ define([
     var FoFPage = Backbone.View.extend({
         el: $('#indexcontent'),
         render: function () {
-            Backbone.history.navigate('404');
             var data = {};
             var compiledTemplate = _.template(fofHTML, data);
             this.$el.html(compiledTemplate);
